@@ -4,6 +4,6 @@ public class EletricEngine implements Engine{
     
     @Override
     public String getDescription(){
-        return "Ekologicky elektromotor (dualni baterie)";
+        return "Ekologický elektromotor (duální baterie)";
     }
 }

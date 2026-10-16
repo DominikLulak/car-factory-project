@@ -4,6 +4,6 @@ public class SportSuspension implements Suspension {
 
     @Override
     public String getDescription(){
-        return "Tvrdy sportovni podvozek (snizeny)";
+        return "Tvrdý sportovní podvozek (snížený)";
     }
 }

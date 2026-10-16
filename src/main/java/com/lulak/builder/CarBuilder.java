@@ -6,10 +6,10 @@ import com.lulak.model.suspension.Suspension;
 
 public class CarBuilder {
 
-    public String modelName = "Standartni model";
+    public String modelName = "Standartní model";
     public Engine engine;
     public Suspension suspension;
-    public String color = "Bila";
+    public String color = "Bílá";
     public boolean gpsNavigator = false;
 
     public CarBuilder setModelName(String modelName){

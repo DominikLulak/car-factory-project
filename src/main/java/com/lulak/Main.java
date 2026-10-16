@@ -11,23 +11,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Vitejte v konfiguratoru vozidel");
-        System.out.println("Vyberte si radu vozu");
-        System.out.println("1 - Sportovni rada");
-        System.out.println("2 - Off-road rada");
+        System.out.println("Vítejte v konfigurátoru vozidel");
+        System.out.println("Vyberte si řadu vozu");
+        System.out.println("1 - Sportovní řada");
+        System.out.println("2 - Off-road řada");
 
         int choice = scanner.nextInt();
         scanner.nextLine();
 
         CarPartsFactory factory;
-        String modulName;
+        String modelName;
 
         if(choice == 1){
             factory = new SportCarFactory();
-            modulName = "Sport Edition";
+            modelName = "Sport Edition";
         }else{
             factory = new OffRoadFactory();
-            modulName = "Adventure 4x4";
+            modelName = "Adventure 4x4";
         }
 
         var engine = factory.createEngine();
@@ -36,18 +36,18 @@ public class Main {
         System.out.println("Zadejte barvu vozu: ");
         String color = scanner.nextLine();
 
-        System.out.println("Prejete si GPS navigaci? (ano/ne): ");
+        System.out.println("Přejete si GPS navigaci? (ano/ne): ");
         boolean gps = scanner.nextLine().equalsIgnoreCase("ano");
 
         Car car = new CarBuilder()
-                .setModelName(modulName)
+                .setModelName(modelName)
                 .setEngine(engine)
                 .setSuspension(suspension)
                 .setColor(color)
                 .setGpsNavigator(gps)
                 .build();
 
-        System.out.println("\nVysledek vasi konfigurace: ");
+        System.out.println("\nVýsledek vaší konfigurace: ");
         System.out.println(car);
     }
 }
