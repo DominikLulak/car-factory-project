@@ -24,6 +24,18 @@ V rámci prvího cvičení byla implementována logika pro konfiguraci a sestave
 
 ---
 
+### Cvičení 2: Structural Patterns
+
+V rámci druhého cvičení byla aplikována rozšíření a integrace pomocí dvou strukturálních návrhových vzorů:
+
+1. **Decorator (`CarDecorator`)**
+   * **Účel:** Umožňuje dynamické přidávání příplatkové výbavy k existujícímu vozidlu (např. prémiová audia) bez nutnosti měnit základní třídu `Car` nebo vytváŕet složitou hirearchii podtříd.
+   * **Implementace:** Společné rozhraní `CarComponent` implementované jak samotným vozidlem (`Car`), tak abstraktním dekorátorem (`CarDecorator`). Konkrétní dekorátory (`PremiumAudioDecorator`, `SportSpoilerDecorator`) obalují komponentu, rozšiřují popis a navyšují celkovou cenu.
+   
+2. **Adapter (`RegistryAdapter`)**
+   * **Účel:** Slouží k propojení moderního objektového modelu aplikace (`Car`) se starším, neměnným externím systémem pro registraci vozidel (`OldRegistrySystem`).
+   * **Implementace:** Rozhraní `RegistryTarget` definuje jednotné očekávané chování. Třída `RegistryAdapter` přebírá volání z aplikace, adaptuje data z objektu `Car` na formát požadovaný starým systémem a předává je k registraci.
+
 ## Budoucí cvičení
 
 *Bude doplňováno v průběhu semestru...*
